@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lonelyn1ck — Official</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --text-muted: #a0a0a0;
+            --border: #222222;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .logo {
+            background: var(--text);
+            color: var(--bg);
+            padding: 5px 15px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-transform: lowercase;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-left: 30px;
+            font-weight: 400;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { opacity: 1; }
+
+        .hero {
+            padding: 100px 0 150px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(4rem, 15vw, 9rem);
+            font-weight: 800;
+            letter-spacing: -6px;
+            line-height: 0.85;
+            margin-bottom: 40px;
+            text-transform: lowercase;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 18px 45px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        .btn-primary:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            border-top: 1px solid var(--border);
+            margin-bottom: 100px;
+        }
+
+        .card {
+            padding: 60px 40px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            background: #050505;
+        }
+
+        .card h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            color: var(--text-muted);
+        }
+
+        .card p {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 5rem; letter-spacing: -3px; }
+            .grid { grid-template-columns: 1fr; }
+            .card { border-right: none; }
+            .btn-group { flex-direction: column; }
+            footer { flex-direction: column; align-items: center; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="#" class="logo">lonelyn1ck</a>
+            <nav class="nav-links">
+                <a href="#links">Ссылки</a>
+                <a href="https://www.twitch.tv/lonelyn1ck" target="_blank">Twitch</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>lonelyn1ck</h1>
+            <p>Dota 2. 6000–7500 MMR. Только чистый скилл и реальные эмоции.</p>
+            <div class="btn-group">
+                <a href="https://www.twitch.tv/lonelyn1ck" target="_blank" class="btn btn-primary">Смотреть LIVE</a>
+                <a href="#links" class="btn btn-secondary">Соцсети</a>
+            </div>
+        </section>
+
+        <section class="grid" id="links">
+            <a href="https://www.twitch.tv/lonelyn1ck" class="card" target="_blank">
+                <h3>STREAMING</h3>
+                <p>Twitch — Ежедневные трансляции высокого уровня.</p>
+            </a>
+            <a href="https://www.tiktok.com/@lonelyn1ck" class="card" target="_blank">
+                <h3>TIKTOK</h3>
+                <p>Лучшие хайлайты и моменты с буйством эмоций.</p>
+            </a>
+            <a href="#" class="card">
+                <h3>UPDATES</h3>
+                <p>Telegram — Анонсы стримов и важная информация.</p>
+            </a>
+        </section>
+
+        <footer>
+            <span>lonelyn1ck © 2026</span>
+            <span>Максимальный минимализм</span>
+        </footer>
+    </div>
+
+</body>
+</html>
